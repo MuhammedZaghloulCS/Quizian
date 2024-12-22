@@ -4,6 +4,7 @@ package com.myownportfolio.quizian
 
 import CustomTopAppBar
 import Question
+import QuizScreen
 import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -40,27 +41,8 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            QuizianTheme {
-                Scaffold(
-                    modifier = Modifier.fillMaxSize(),
-                    topBar = { CustomTopAppBar() }
-                ) {
-                    Column(modifier = Modifier.fillMaxSize()
-                        .background(brush = Brush.verticalGradient(listOf(
-                        Color(0xFF3700B3),
-                        Color(0xFF6200EE) // Gradient start color
-                    )
-                        )
-                    )
-                    ) {
-                        Question()
 
-
-                    }
-
-
-                }
-            }
+            QuizScreen(applicationContext)
         }
     }
 }

@@ -56,4 +56,12 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+// ViewModel and LiveData
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
+    // Kotlin Coroutines Core Library
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+
+    // Kotlin Coroutines Android Library
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
 }
