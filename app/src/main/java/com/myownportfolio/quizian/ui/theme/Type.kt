@@ -38,13 +38,13 @@ val Typography = Typography(
 
 )
 fun textStyle(size:Int=25) = androidx.compose.ui.text.TextStyle(
-    color = Color.White,
+    color = Color.Black,
     fontSize = size.sp,
     textAlign = TextAlign.Center, // Ensures the text is centered horizontally
     fontFamily = FontFamily(Font(R.font.allan_bold))
 )
 fun textStyle2(size:Int=15) = androidx.compose.ui.text.TextStyle(
-    color = Color.White,
+    color = Color.Black,
     fontSize = size.sp,
     textAlign = TextAlign.Center // Ensures the text is centered horizontally
 

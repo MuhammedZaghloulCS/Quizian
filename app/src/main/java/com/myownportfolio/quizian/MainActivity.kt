@@ -10,6 +10,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -33,16 +34,18 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.input.EditProcessor
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.myownportfolio.quizian.MVVM.SetQuizViewModel
 import com.myownportfolio.quizian.ui.theme.QuizianTheme
 
 class MainActivity : ComponentActivity() {
+    val viewModel : SetQuizViewModel by viewModels()
 
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
 
-            QuizScreen(applicationContext)
+            QuizScreen(applicationContext,viewModel)
         }
     }
 }
